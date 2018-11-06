@@ -55,3 +55,29 @@ cd join_geojson_w_csv
 ```sh
 python join_geojson_w_csv.py
 ```
+
+### 3.http_request
+Send simple http request from an array of input. Put response in a csv file. Expect response to be an array of object.
+
+#### Usage
+1. In terminal
+```sh
+cd http_request
+```
+
+2. activate your [virtualenv](https://virtualenv.pypa.io/en/latest/)
+```sh
+virtualenv ENV
+source /path/to/ENV/bin/activate
+```
+
+3. Open `http_request.py`
+- Edit `input_file` with path to the input csv.
+- Edit `output_file` with path to the output csv, which will be created if doesn't exist.
+- Edit `headers` with a list of keys to be added to the output csv. Each key should be contained in the json response
+- Edit `get_request_url()` to return the request url given each row.
+
+4. run script inside directory
+```sh
+python http_request.py
+```
